@@ -13,8 +13,6 @@ const ItemGraph = require('./models/ItemGraphSQL');
 routes.get('/item', ItemController.indexItem);
 // Exibição de Todos Itens
 
-//routes.use('/itemgraph', graphqlHTTP({schema:ItemGraph, pretty:true}));
-
 /* CRUD GRAPHQL */
 routes.use('/itemgraph', graphqlHTTP({schema: ItemGraph.ItemSchemaGraph, rootValue: ItemGraph.ItemRootGraph, graphiql:true}));
 
